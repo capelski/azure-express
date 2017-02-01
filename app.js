@@ -1,13 +1,15 @@
+var express = require('express');
+var server = express();
 
+var config = require('./config/config');
 
-var express = require('express'),
-  config = require('./config/config');
+// module.exports = require('./config/express')(app, config);
 
-var app = express();
+server.get('/', function(req, res) {
+	res.send('Hi');
+});
 
-module.exports = require('./config/express')(app, config);
-
-app.listen(config.port, function () {
+server.listen(config.port, function () {
   console.log('Express server listening on port ' + config.port);
 });
 
