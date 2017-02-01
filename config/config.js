@@ -1,6 +1,6 @@
-var path = require('path'),
-    rootPath = path.normalize(__dirname + '/..'),
-    env = process.env.NODE_ENV || 'development';
+var path = require('path');
+var rootPath = path.normalize(__dirname + '/..');
+var env = process.env.NODE_ENV || 'development';
 
 var config = {
   development: {
@@ -9,14 +9,6 @@ var config = {
       name: 'test-app'
     },
     port: process.env.PORT || 3000,
-  },
-
-  test: {
-    root: rootPath,
-    app: {
-      name: 'test-app'
-    },
-    port: process.env.PORT || 80,
   },
 
   production: {
