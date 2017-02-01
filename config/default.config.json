@@ -1,0 +1,13 @@
+{
+  "development": {
+    "app": {
+      "name": "azure-express"
+    },
+    "defaultPort": 3000
+  },
+  "production": {
+    "app": {
+      "name": "azure-express"
+    }
+  }
+}

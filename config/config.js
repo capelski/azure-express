@@ -1,23 +1,11 @@
 var path = require('path');
 var rootPath = path.normalize(__dirname + '/..');
 var env = process.env.NODE_ENV || 'development';
+var config = require('./config.json');
 
-var config = {
-  development: {
-    root: rootPath,
-    app: {
-      name: 'azure-express'
-    },
-    port: process.env.PORT || 3000,
-  },
+var selectedConfig = config[env];
 
-  production: {
-    root: rootPath,
-    app: {
-      name: 'azure-express'
-    },
-    port: process.env.PORT,
-  }
-};
+selectedConfig.root = rootPath;
+selectedConfig.port = process.env.PORT || selectedConfig.defaultPort;
 
-module.exports = config[env];
+module.exports = selectedConfig;
