@@ -1,5 +1,5 @@
 {
-  "name": "test-app",
+  "name": "azure-express",
   "version": "0.0.1",
   "private": true,
   "main": "server.js",
