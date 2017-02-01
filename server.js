@@ -1,9 +1,5 @@
-var express = require('express');
-var server = express();
-
+var server = require('./config/express');
 var config = require('./config/config');
-
-// module.exports = require('./config/express')(app, config);
 
 server.get('/', function(req, res) {
 	res.send('Hi');
